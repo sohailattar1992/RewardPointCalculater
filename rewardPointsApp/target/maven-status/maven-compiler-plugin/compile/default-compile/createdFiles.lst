@@ -1,0 +1,6 @@
+com\rewardPointsApp\Application\RewardPointsAppApplication.class
+com\rewardPointsApp\model\RewardReport.class
+com\rewardPointsApp\service\RewardService.class
+com\rewardPointsApp\model\Transaction.class
+com\rewardPointsApp\controller\RewardController.class
+com\rewardPointsApp\model\customer.class
