@@ -23,4 +23,20 @@ public class RewardControllerTest {
         mockMvc.perform(MockMvcRequestBuilders.get("/api/rewards/all"))
                .andExpect(MockMvcResultMatchers.status().isOk());
     }
+
+     @Test
+    public void testGetAllCustomersRewardReports() throws Exception {
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/rewards/report"))
+               .andExpect(MockMvcResultMatchers.status().isOk())
+               .andExpect(MockMvcResultMatchers.content().contentType("application/json"));
+    }
+
+    
+    @Test
+    public void testGetCustomerRewardReport() throws Exception {
+        Long customerId = 1L; // Set a valid customer ID
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/rewards/" + customerId + "/report"))
+               .andExpect(MockMvcResultMatchers.status().isOk())
+               .andExpect(MockMvcResultMatchers.content().contentType("application/json"));
+    }
 }
